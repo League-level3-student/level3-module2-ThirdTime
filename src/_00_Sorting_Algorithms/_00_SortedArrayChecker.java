@@ -61,6 +61,7 @@ public class _00_SortedArrayChecker {
 				return false;
 			}
 		}
+		//to-do: read the comments and implement the compareTo method
 		return true;
 	}
 }
