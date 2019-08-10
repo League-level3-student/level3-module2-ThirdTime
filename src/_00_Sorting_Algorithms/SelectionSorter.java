@@ -4,13 +4,26 @@ public class SelectionSorter extends Sorter {
 	public SelectionSorter() {
 		type = "Selection";
 	}
-	
-	//  You can use display.updateDisplay() to show the current
-	//   progress on the graph.
+
+	// You can use display.updateDisplay() to show the current
+	// progress on the graph.
 	@Override
 	void sort(int[] array, SortingVisualizer display) {
 		//1. make a for loop to iterate through all but the last 
 		//   element of the array
+		int tempValue;
+		for(int i = 0; i < array.length-1; i++) {
+			int index = i;
+			for(int j = i+1; j < array.length;j++) {
+				if(array[j] < array[index]) {
+					index = j;
+				}
+			}
+			tempValue = array[i];
+			array[i] = array[index];
+			array[index] = tempValue;
+			display.updateDisplay();
+		}
 		
 			//2. create an integer called index and set it equal to i
 			
