@@ -42,7 +42,9 @@ public class _02_InterpolationSearch {
             }
 			
             //7. otherwise, set end equal to position minus one
-            end = position -1;
+            else {
+            		end = position -1;
+            }
 		}
         //8. Return -1 because the value was not found
         return -1;
